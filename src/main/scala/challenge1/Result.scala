@@ -206,7 +206,7 @@ object Example {
     try{
       Ok(body.toInt)
     } catch {
-      case e => Fail(InvalidRequest)
+      case e: Throwable => Fail(InvalidRequest)
     }
   }
 
@@ -254,13 +254,25 @@ object Example {
    *  - determing request value
    *  - using the implementation and request value to compute an answer.
    */
-  def service(path: String, methodx: String, body: String): Result[Int] =
-    
+  def service(path: String, methodx: String, body: String): Result[Int] = 
+    method(methodx) match {
+      case Ok(m) => route(m, path) match {
+        case Ok(n) => request(body) match {
+          case Ok(success) => Ok(n(success))
+          case Fail(failure) => Fail(failure)
+        }
+        case Fail(f) => Fail(f)
+      } 
+      case _ => Fail(InvalidMethod)
+    }
 
   /*
    * Sometimes we always an `answer`, so default to 0 if
    * our request failed in any way.
    */
   def run(path: String, method: String, body: String): Int =
-    ???
+    service(path, method, body) match {
+      case Ok(s) => s
+      case Fail(f) => 0
+    }
 }
