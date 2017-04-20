@@ -1,3 +1,7 @@
+/* Author: Kimple Ke 
+   Date: 20.4.2017
+*/
+
 package challenge1
 
 import core._, Syntax._
