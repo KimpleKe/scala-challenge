@@ -1,1 +1,3 @@
 testOnly challenge1.Challenge1Spec
+compile
+testOnly challenge1.Challenge1Spec

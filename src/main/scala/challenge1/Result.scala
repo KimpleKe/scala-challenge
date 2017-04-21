@@ -273,6 +273,7 @@ object Example {
    */
   def service(path: String, methodx: String, body: String): Result[Int] = 
     /* solution 1 */
+    /*
     method(methodx) match {
       case Ok(m) => route(m, path) match {
         case Ok(n) => request(body) match {
@@ -282,6 +283,23 @@ object Example {
         case Fail(f) => Fail(f)
       } 
       case _ => Fail(InvalidMethod)
+    }*/
+
+    /* solution 2 */
+    //method(methodx).flatMap(m => route(m, path).flatMap(f => request(body).flatMap(r => f(r)))
+
+    /* solution 3 */
+    /*for {
+      m <- method(methodx)
+      f <- route(m, path)
+      r <- request(body)
+    } yield f(r)*/
+
+    /* solution 4 */
+    {
+        val f : Result[Int => Int] = method(methodx).flatMap(m => route(m, path))
+        val r : Result[Int] = request(body)
+        f.flatMap(formula => r.map(result => formula(result)))
     }
 
   /*
