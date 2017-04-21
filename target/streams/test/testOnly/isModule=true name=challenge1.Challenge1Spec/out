@@ -1,0 +1,31 @@
+[0m[[0minfo[0m] [0mChallenge1Spec[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37mEqual should[0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[32m+[0m satisfy equal laws[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37mResult should[0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[32m+[0m satisfy equal laws with Int[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[32m+[0m satisfy equal laws with String[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[32m+[0m satisfy monad laws[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[32m+[0m Ok#getOrElse always returns value[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[32m+[0m Fail#getOrElse always returns value[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[32m+[0m Ok ||| x always returns value[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[32m+[0m Fail ||| x always returns alternative[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[32m+[0m fold with fail[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[32m+[0m fold with ok[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37mExample should[0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[32m+[0m single[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[32m+[0m double[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[32m+[0m triple[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[32m+[0m handle invalid method[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[32m+[0m handle invalid path[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[32m+[0m handle invalid request[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[32m+[0m handle unauthorized method[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[32m+[0m default to 0 in failure[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[32m+[0m not default to 0 in success[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0mTotal for specification Challenge1Spec[0m
+[0m[[0minfo[0m] [0m[34mFinished in 15 ms[0m[0m
+[0m[[0minfo[0m] [0m[34m[0m[34m19 examples, 1009 expectations, 0 failure, 0 error[0m[0m

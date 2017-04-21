@@ -241,9 +241,10 @@ object Example {
   def route(method: Method, path: String): Result[Int => Int] =
     method match {
       case Get => path match {
-        case "single" => Ok(_*1)
-        case "double" => Ok(_*2)
-        case "triple" => Ok(_*3)
+        case "/single" => Ok(_*1)
+        case "/double" => Ok(_*2)
+        case "/triple" => Ok(_*3)
+        case _ => Fail(NotFound)
       }
       case Put => Fail(Unauthorized)
       case Post => Fail(Unauthorized)
