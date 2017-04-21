@@ -239,6 +239,7 @@ object Example {
    *   *           -> NotFound
    */
   def route(method: Method, path: String): Result[Int => Int] =
+    /* solution 1 */
     method match {
       case Get => path match {
         case "/single" => Ok(_*1)
@@ -260,6 +261,7 @@ object Example {
    *  - using the implementation and request value to compute an answer.
    */
   def service(path: String, methodx: String, body: String): Result[Int] = 
+    /* solution 1 */
     method(methodx) match {
       case Ok(m) => route(m, path) match {
         case Ok(n) => request(body) match {
