@@ -240,7 +240,7 @@ object Example {
    */
   def route(method: Method, path: String): Result[Int => Int] =
     /* solution 1 */
-    method match {
+    /* method match {
       case Get => path match {
         case "/single" => Ok(_*1)
         case "/double" => Ok(_*2)
@@ -250,6 +250,17 @@ object Example {
       case Put => Fail(Unauthorized)
       case Post => Fail(Unauthorized)
       case Delete => Fail(Unauthorized)
+      case _ => Fail(NotFound)
+    } */
+
+    /* solution 2 */
+    (method, path) match {
+      case (Get, "/single") => Ok(_*1)
+      case (Get, "/double") => Ok(_*2)
+      case (Get, "/triple") => Ok(_*3)
+      case (Put, _) => Fail(Unauthorized)
+      case (Post, _) => Fail(Unauthorized)
+      case (Delete, _) => Fail(Unauthorized)
       case _ => Fail(NotFound)
     }
 
