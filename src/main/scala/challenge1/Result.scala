@@ -286,7 +286,7 @@ object Example {
     }*/
 
     /* solution 2 */
-    //method(methodx).flatMap(m => route(m, path).flatMap(f => request(body).flatMap(r => f(r)))
+    //method(methodx).flatMap(m => route(m, path).flatMap(f => request(body).map(r => f(r))))
 
     /* solution 3 */
     /*for {
