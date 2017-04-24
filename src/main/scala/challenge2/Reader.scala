@@ -49,7 +49,9 @@ object Reader {
    * Hint: Try using Reader constructor.
    */
   def value[R, A](a: => A): Reader[R, A] =
-    ???
+    Reader {
+      r => a
+    }
 
   /*
    * Exercise 2.4:
@@ -61,7 +63,9 @@ object Reader {
    * Hint: Try using Reader constructor.
    */
   def ask[R]: Reader[R, R] =
-    ???
+    Reader {
+      r => r
+    }
 
   /*
    * Exercise 2.5:
@@ -73,7 +77,9 @@ object Reader {
    * Hint: Try using Reader constructor.
    */
   def local[R, A](f: R => R)(reader: Reader[R, A]): Reader[R, A] =
-    ???
+    Reader {
+      r => reader.run(f(r))
+    }
 
   /*
    * Exercise 2.6:
