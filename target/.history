@@ -5,3 +5,5 @@ compile
 testOnly challenge1.Challenge1Spec
 compile
 ~compile
+compile
+~compile
