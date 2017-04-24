@@ -87,7 +87,9 @@ object Reader {
    * Sequence, a list of Readers, to a Reader of Lists.
    */
   def sequence[R, A](readers: List[Reader[R, A]]): Reader[R, List[A]] =
-    ???
+    Reader {
+      r => readers.map(reader => reader.run(r))
+    }
 
   implicit def ReaderMonoid[R, A: Monoid]: Monoid[Reader[R, A]] =
     new Monoid[Reader[R, A]] {
@@ -138,7 +140,7 @@ object Example {
    * Hint: Starting with Reader.ask will help.
    */
   def direct(name: String): Reader[Config, List[String]] =
-    ???
+    
 
   /*
    * For a single name, lookup all of the indirect values, that
