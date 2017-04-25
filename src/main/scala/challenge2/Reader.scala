@@ -140,7 +140,11 @@ object Example {
    * Hint: Starting with Reader.ask will help.
    */
   def direct(name: String): Reader[Config, List[String]] =
+    val entry : ConfigEntry = ConfigEntry(name, list)
     
+    Reader {
+      config => config.find(entry).flatMap(e => e.find(name).getOrElse(None))
+    }
 
   /*
    * For a single name, lookup all of the indirect values, that

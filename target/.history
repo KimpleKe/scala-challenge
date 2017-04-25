@@ -7,3 +7,5 @@ compile
 ~compile
 compile
 ~compile
+testOnly challenge2.Challenge2Spec
+~compile
