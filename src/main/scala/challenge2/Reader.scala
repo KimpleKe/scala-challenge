@@ -144,7 +144,7 @@ object Example {
     val readConfigEntry: Reader[Config, List[ConfigEntry]] = readConfig.map(c => c.data)
     readConfigEntry.map(
       entries => 
-      entries.find((entry: ConfigEntry) => entry.name == name).getOrElse(ConfigEntry(name, Nil)).values
+      entries.find((entry: ConfigEntry) => entry.name == name).getOrElse(ConfigEntry("", Nil)).values
       )
   }
 
