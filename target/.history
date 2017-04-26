@@ -2,10 +2,9 @@ testOnly challenge1.Challenge1Spec
 compile
 testOnly challenge1.Challenge1Spec
 compile
-testOnly challenge1.Challenge1Spec
-compile
-~compile
-compile
 ~compile
 testOnly challenge2.Challenge2Spec
+compile
+testOnly challenge2.Challenge2Spec
+compile
 ~compile
