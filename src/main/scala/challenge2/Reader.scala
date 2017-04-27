@@ -149,6 +149,20 @@ object Example {
   }
 
   /*
+   def direct(name: String): Reader[Config, List[String]] = {
+    val readConfig : Reader[Config, Config] = Reader.ask[Config]
+    val readConfigEntry: Reader[Config, List[ConfigEntry]] = readConfig.map(_.data)
+    readConfigEntry.map(
+      _.find(_.name == name).getOrElse(ConfigEntry("", Nil)).values
+      )
+  }
+  */
+
+  /*def direct(name: String): Reader[Config, List[String]] = {
+    Reader.ask[Config].map(_.data).map(_.find(_.name == name).getOrElse(ConfigEntry("", Nil)).values)
+  }*/
+
+  /*
    * For a single name, lookup all of the indirect values, that
    * is those values whose key is a one of the direct values of
    * the specified name.

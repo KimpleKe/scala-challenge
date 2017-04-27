@@ -1,0 +1,24 @@
+[0m[[0minfo[0m] [0mChallenge2Spec[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37mReader should[0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37m[33mx[0m satisfy monad laws[0m[0m
+[0m[[31merror[0m] [0m   Exception raised on argument generation.[0m
+[0m[[31merror[0m] [0m   > Exception: scala.NotImplementedError: an implementation is missing (Reader.scala:48)[0m
+[0m[[0minfo[0m] [0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37m[33mx[0m return context for ask (guaranteed by types)[0m[0m
+[0m[[31merror[0m] [0m   A counter-example is '0' (after 0 try - shrinked ('-1' -> '0'))[0m
+[0m[[31merror[0m] [0m   an implementation is missing (Reader.scala:60)[0m
+[0m[[0minfo[0m] [0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37m[33mx[0m modify environment for local[0m[0m
+[0m[[31merror[0m] [0m   A counter-example is '0' (after 0 try - shrinked ('998493860' -> '0'))[0m
+[0m[[31merror[0m] [0m   an implementation is missing (Reader.scala:60)[0m
+[0m[[0minfo[0m] [0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37m[33mx[0m satisfy monoid laws[0m[0m
+[0m[[31merror[0m] [0m   Exception raised on argument generation.[0m
+[0m[[31merror[0m] [0m   > Exception: scala.NotImplementedError: an implementation is missing (Reader.scala:48)[0m
+[0m[[0minfo[0m] [0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0m[37m[0m[0m
+[0m[[0minfo[0m] [0m[37m[0mTotal for specification Challenge2Spec[0m
+[0m[[0minfo[0m] [0m[34mFinished in 14 ms[0m[0m
+[0m[[0minfo[0m] [0m[34m[0m[34m4 examples, 4 failures, 0 error[0m[0m
