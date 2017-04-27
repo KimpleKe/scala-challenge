@@ -21,8 +21,9 @@ case class Writer[W, A](log: W, value: A) {
    *  2) r.map(z => f(g(z))) == r.map(g).map(f)
    *
    */
-  def map[B](f: A => B): Writer[W, B] =
-    ???
+  def map[B](f: A => B): Writer[W, B] = 
+    Writer(log, f(value))
+  
 
   /*
    * Exercise 3.2:

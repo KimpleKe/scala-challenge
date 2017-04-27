@@ -147,7 +147,7 @@ object Example {
       entries.find((entry: ConfigEntry) => entry.name == name).getOrElse(ConfigEntry("", Nil)).values
       )
   }
-  
+
   /*
    def direct(name: String): Reader[Config, List[String]] = {
     val readConfig : Reader[Config, Config] = Reader.ask[Config]
@@ -173,6 +173,6 @@ object Example {
    *
    * Hint: Starting with Reader.sequence will be important.
    */
-  def indirect(name: String): Reader[Config, List[String]] =
-    ???
+  def indirect(name: String): Reader[Config, List[String]] = ???
+
 }
