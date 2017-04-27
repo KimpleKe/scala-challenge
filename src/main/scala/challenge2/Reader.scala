@@ -147,7 +147,7 @@ object Example {
       entries.find((entry: ConfigEntry) => entry.name == name).getOrElse(ConfigEntry("", Nil)).values
       )
   }
-
+  
   /*
    def direct(name: String): Reader[Config, List[String]] = {
     val readConfig : Reader[Config, Config] = Reader.ask[Config]
@@ -161,6 +161,7 @@ object Example {
   /*def direct(name: String): Reader[Config, List[String]] = {
     Reader.ask[Config].map(_.data).map(_.find(_.name == name).getOrElse(ConfigEntry("", Nil)).values)
   }*/
+
 
   /*
    * For a single name, lookup all of the indirect values, that

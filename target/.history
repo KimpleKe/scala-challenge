@@ -8,3 +8,4 @@ compile
 testOnly challenge2.Challenge2Spec
 compile
 ~compile
+compile
