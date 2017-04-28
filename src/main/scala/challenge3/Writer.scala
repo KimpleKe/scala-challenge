@@ -50,7 +50,7 @@ object Writer {
    * Hint: Try using Writer constructor.
    */
   def value[W: Monoid, A](a: A): Writer[W, A] =
-    ???
+    
 
   /*
    * Exercise 3.4:
