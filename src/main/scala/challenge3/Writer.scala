@@ -49,8 +49,8 @@ object Writer {
    *
    * Hint: Try using Writer constructor.
    */
-  def value[W: Monoid, A](a: A): Writer[W, A] =
-    
+  def value[W: Monoid, A](a: A): Writer[W, A] = 
+    Writer(Monoid[W].zero, a)
 
   /*
    * Exercise 3.4:
