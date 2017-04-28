@@ -62,7 +62,7 @@ object Writer {
    * Hint: Try using Writer constructor.
    */
   def tell[W](w: W): Writer[W, Unit] =
-    ???
+    Writer(w, ())
 
   /*
    * Exercise 3.5:
